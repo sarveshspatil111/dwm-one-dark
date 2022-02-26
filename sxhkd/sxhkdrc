@@ -1,0 +1,22 @@
+# My Hotkeys
+
+Print
+	maim -s --format png /dev/stdout | xclip -selection clipboard -t image/png -i
+
+super + Print 
+	maim --select | tee ~/Pictures/$(date +%s).png | xclip -sel c -t image/png
+
+# XF86Audio{RaiseVolume,LowerVolume,Mute}
+# 	pamixer -{i,d,t} 1; kill -34 $(cat ~/.cache/pidofbar)
+
+XF86MonBrightnessUp
+  light -A 1
+
+XF86MonBrightnessDown
+  light -U 1
+
+super + Return
+	st
+
+super + space
+	dmenu_run -i -nb '#0d1117' -nf '#5293e2' -sb '#5293e2' -sf '#0d1117' -fn 'JetBrainsMono Nerd Font:Regular:pixelsize=30' -l 5

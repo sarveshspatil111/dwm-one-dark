@@ -1,0 +1,11 @@
+#!/bin/sh
+
+nitrogen --restore &
+xset r rate 300 50 &
+/usr/lib64/polkit-gnome/polkit-gnome-authentication-agent-1 &
+picom --config /home/sarvesh/.config/suckless/scripts/picom.conf &
+# /home/sarvesh/.config/suckless/bin/dwm_bar &
+sxhkd &
+dwmblocks &
+
+exec dwm > /dev/null 2>&1
